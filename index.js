@@ -20,10 +20,10 @@ mongoose
     .then(() => console.log('Conectado a MongoDB Atlas =) ') )
     .catch(err => console. error('Error al conectar:', err) );
 
-    //const rutasContactos = require('./routes/contactos');
-    //servidor.use('/api/contactos', rutasContactos)
+    const rutasProductos = require('./routes/productos');
+    servidor.use('/api/productos', rutasProductos)
 
-// Arrancamos el servidor en el puerto definido en .env o 3000
+
 const puerto = process.env. PUERTO || 3000;
     servidor.listen(puerto, ()=> {
     console.log(`Servidor corriendo en el puerto ${puerto} `);
